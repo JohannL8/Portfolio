@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Courgette';
+    src: url(font/Courgette-Regular.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+h2 {
+    font-size: 70px;
+    font-family: 'Courgette',monospace;
+}
+h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+/*header*/
+
+header {
+    height: 80px;
+    box-shadow: 0 5px 5px -5px red;
+}
+
+.topBar {
+    width: 90%;
+    max-width: 1400px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nameLogo {
+    color: #FFF;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Courgette',monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+    text-shadow: 0 0 5px red,
+                 0 0 10px red,
+                 0 0 20px red;
+}
+.nameLogo span {
+    transition: .5s linear;
+}
+.nameLogo span:nth-child(2){
+    display: none;
+}
+.nameLogo:hover span:nth-child(1){
+    display: none;
+}
+.nameLogo:hover span:nth-child(2){
+    display: inherit;
+}
+.nameLogo:hover span{
+    color: #FFF;
+    text-shadow: 0 0 5px red,
+                 0 0 10px red,
+                 0 0 20px red;
+}
+
+.navTitle {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courgette', monospace;
+    text-shadow: -1px 0 red,
+                 0 1px red,
+                 1px 0 red,
+                 0 -1px red;
+    padding-left: 10px;
+}
+
+.navTitle:hover {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courgette', monospace;
+    text-shadow: 0 0 5px red,
+                 0 0 10px red;
+}
+ .activ {
+     color: red;
+ }
+/*main*/
+
+.firstMain {
+    margin: 2px auto 0 auto;
+    background-color: #EAEAEA;
+    box-shadow: 0 2px 4px #CFCFCF inset;
+}
+.intro {
+    width: 90%;
+    max-width: 1400px;
+    margin: 2px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.introText {
+    width: 50%;
+    font-family: 'Courgette', monospace;
+}
+
+.intro img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-bottom: -6px;
+}
+.mesComp img {
+    display: flex;
+    width: 60%;
+    margin: auto;
+}
+.cadre {
+    padding: 10px;
+    text-align: justify;
+    box-shadow: 5px 5px 20px grey;
+}
+
+.comp {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto 50px auto;
+    max-width: 90%;
+}
+
+.secondMain {
+    width: 45%;
+}
+
+.secondMain h3 {
+    text-align: center;
+    font-family: 'Courgette', monospace;
+}
+.listItem {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.liste {
+    font-size: 30px;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.monCV img {
+    object-fit: contain;
+    width: 90%;
+}
+/*footer*/
+
+.footBar {
+    height: 70px;
+    box-shadow: 0 -5px 5px -5px red;
+}
+
+.footText {
+    text-align: center;
+    padding: 30px;
+}
