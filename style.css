@@ -14,6 +14,7 @@ h2 {
 h3 {
     font-size: 50px;
     margin-bottom: 20px;
+    font-family: 'Courgette',monospace;
 }
 /*header*/
 
@@ -64,6 +65,7 @@ header {
 }
 
 .navTitle {
+    width: 30px;
     color: #fff;
     font-size: 20px;
     font-weight: bold;
@@ -83,9 +85,61 @@ header {
     text-shadow: 0 0 5px red,
                  0 0 10px red;
 }
- .activ {
-     color: red;
- }
+.activ {
+
+     color: #DD8B8B;
+}
+
+/*navigation mobile*/
+
+.navMobile {
+    display: none;
+}
+/* input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+input[type="checkbox"]:checked + label {
+    border: 4px solid silver;
+    border-radius: 50%;
+    height: 28px;
+    top: 16px;
+    left: 80%;
+    width: 28px;
+    transform: rotate(-135deg);
+}
+input[type="checkbox"]:checked + label::before {
+    background: silver;
+    top: 8px;
+    left: 4px;
+    width: 12px;
+}
+input[type="checkbox"]:checked + label::after {
+    background: silver;
+    opacity: 1;
+    top: 8px;
+    left: 4px;
+    visibility: visible;
+    width: 12px;
+}
+input[type="checkbox"]:checked + label:hover {
+    border-color: coral;
+}
+input[type="checkbox"]:checked + label:hover::before {
+    background: coral;
+}
+input[type="checkbox"]:checked + label:hover::after {
+    background: coral;
+}
+input[type="checkbox"]:checked ~ .navLinks {
+
+}
+input[type="checkbox"]:checked ~ .navLinks::before {
+    opacity: 1;
+    visibility: visible;
+} */
+
 /*main*/
 
 .firstMain {
@@ -100,6 +154,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: justify;
+    font-size: 17px;
 }
 .introText {
     width: 50%;
@@ -117,10 +173,11 @@ header {
 .mesComp img {
     display: flex;
     width: 60%;
+    max-width: 500px;
     margin: auto;
 }
 .cadre {
-    padding: 10px;
+    padding: 40px 10px;
     text-align: justify;
     box-shadow: 5px 5px 20px grey;
 }
@@ -129,7 +186,8 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 50px auto 50px auto;
-    max-width: 90%;
+    width: 90%;
+    max-width: 1400px;
 }
 
 .secondMain {
@@ -150,11 +208,24 @@ header {
     padding: 10px 20px;
     align-items: center;
 }
-
+.monCV {
+    margin: 10px auto;
+    max-width: 1241px;
+}
 .monCV img {
     object-fit: contain;
     width: 90%;
 }
+/*story*/
+
+.passion {
+    margin: 10px auto 0 auto;
+    width: 90%;
+}
+.passion h2 {
+    text-align: center;
+}
+
 /*footer*/
 
 .footBar {
@@ -165,4 +236,14 @@ header {
 .footText {
     text-align: center;
     padding: 30px;
+}
+
+@media all and (max-width:1160px) {
+    #nav {
+        display: none;
+    }
+
+    .navMobile {
+        display: inherit;
+    }
 }
