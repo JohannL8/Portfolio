@@ -1,249 +1,285 @@
 @font-face {
-    font-family: 'Courgette';
-    src: url(font/Courgette-Regular.ttf);
+  font-family: "Courgette";
+  src: url(font/Courgette-Regular.ttf);
 }
 * {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
+
 h2 {
-    font-size: 70px;
-    font-family: 'Courgette',monospace;
+  font-size: 70px;
+  font-family: "Courgette", monospace;
 }
+
 h3 {
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-family: 'Courgette',monospace;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Courgette", monospace;
 }
+
 /*header*/
-
-header {
-    height: 80px;
-    box-shadow: 0 5px 5px -5px red;
+nav {
+  height: 80px;
+  box-shadow: 0 5px 5px -5px red;
+  width: 100%;
 }
 
-.topBar {
-    width: 90%;
-    max-width: 1400px;
-    height: 80px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+@media (max-width: 850px) {
+  nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #cfcfcf;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+}
 
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+@media (max-width: 850px) {
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+}
+
+nav li a {
+  color: white;
+  font-family: "Courgette", monospace;
+  font-size: 20px;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+nav li a:hover {
+  text-shadow: 0 0 5px red, 0 0 10px red;
+}
+nav li a .activ {
+  color: red;
+}
+@media (max-width: 850px) {
+  nav li a {
+    font-size: 25px;
+    color: red;
+  }
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: red;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 850px) {
+  .checkbtn {
+    display: block;
+  }
+}
+
+#check {
+  display: none;
+}
+@media (max-width: 850px) {
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
 
 .nameLogo {
-    color: #FFF;
-    font-size: 50px;
-    font-weight: bold;
-    font-family: 'Courgette',monospace;
-    letter-spacing: 7px;
-    cursor: pointer;
-    text-shadow: 0 0 5px red,
-                 0 0 10px red,
-                 0 0 20px red;
+  display: table-cell;
+  vertical-align: middle;
+  height: 80px;
+  color: #FFF;
+  padding: 0 80px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Courgette", monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red;
+}
+@media (max-width: 850px) {
+  .nameLogo {
+    font-size: 30px;
+  }
 }
 .nameLogo span {
-    transition: .5s linear;
+  transition: 0.5s linear;
 }
-.nameLogo span:nth-child(2){
-    display: none;
+.nameLogo span:nth-child(2) {
+  display: none;
 }
-.nameLogo:hover span:nth-child(1){
-    display: none;
+
+.nameLogo:hover span {
+  color: #FFF;
+  text-shadow: 0 0 5px red, 0 0 10px red, 0 0 20px red;
 }
-.nameLogo:hover span:nth-child(2){
-    display: inherit;
+.nameLogo:hover span:nth-child(1) {
+  display: none;
 }
-.nameLogo:hover span{
-    color: #FFF;
-    text-shadow: 0 0 5px red,
-                 0 0 10px red,
-                 0 0 20px red;
+.nameLogo:hover span:nth-child(2) {
+  display: inherit;
 }
 
 .navTitle {
-    width: 30px;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Courgette', monospace;
-    text-shadow: -1px 0 red,
-                 0 1px red,
-                 1px 0 red,
-                 0 -1px red;
-    padding-left: 10px;
+  width: 30px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Courgette", monospace;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+  padding-left: 10px;
 }
-
 .navTitle:hover {
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Courgette', monospace;
-    text-shadow: 0 0 5px red,
-                 0 0 10px red;
+  text-shadow: 0 0 5px red, 0 0 10px red;
 }
+@media (max-width: 1160px) {
+  .navTitle {
+    display: none;
+  }
+}
+
 .activ {
-
-     color: #DD8B8B;
+  color: red;
 }
-
-/*navigation mobile*/
 
 .navMobile {
-    display: none;
+  display: none;
 }
-/* input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
+@media (max-width: 1160px) {
+  .navMobile {
+    display: inherit;
+  }
 }
-input[type="checkbox"]:checked + label {
-    border: 4px solid silver;
-    border-radius: 50%;
-    height: 28px;
-    top: 16px;
-    left: 80%;
-    width: 28px;
-    transform: rotate(-135deg);
-}
-input[type="checkbox"]:checked + label::before {
-    background: silver;
-    top: 8px;
-    left: 4px;
-    width: 12px;
-}
-input[type="checkbox"]:checked + label::after {
-    background: silver;
-    opacity: 1;
-    top: 8px;
-    left: 4px;
-    visibility: visible;
-    width: 12px;
-}
-input[type="checkbox"]:checked + label:hover {
-    border-color: coral;
-}
-input[type="checkbox"]:checked + label:hover::before {
-    background: coral;
-}
-input[type="checkbox"]:checked + label:hover::after {
-    background: coral;
-}
-input[type="checkbox"]:checked ~ .navLinks {
-
-}
-input[type="checkbox"]:checked ~ .navLinks::before {
-    opacity: 1;
-    visibility: visible;
-} */
 
 /*main*/
-
 .firstMain {
-    margin: 2px auto 0 auto;
-    background-color: #EAEAEA;
-    box-shadow: 0 2px 4px #CFCFCF inset;
-}
-.intro {
-    width: 90%;
-    max-width: 1400px;
-    margin: 2px auto 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: justify;
-    font-size: 17px;
-}
-.introText {
-    width: 50%;
-    font-family: 'Courgette', monospace;
+  margin: 2px auto 0 auto;
+  background-color: #EAEAEA;
+  box-shadow: 0 2px 4px #CFCFCF inset;
 }
 
+.intro {
+  width: 90%;
+  max-width: 1400px;
+  margin: 2px auto 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
+  font-size: 17px;
+}
 .intro img {
-    object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+  align-self: flex-end;
+  margin-top: 20px;
+  margin-bottom: -16px;
+}
+@media (max-width: 1200px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+
+.introText {
+  width: 50%;
+  font-family: "Courgette", monospace;
+}
+@media (max-width: 1200px) {
+  .introText {
     width: 100%;
-    max-height: 400px;
-    align-self: flex-end;
-    margin-top: 20px;
-    margin-bottom: -6px;
+  }
 }
+
 .mesComp img {
-    display: flex;
-    width: 60%;
-    max-width: 500px;
-    margin: auto;
+  display: flex;
+  width: 60%;
+  max-width: 500px;
+  margin: auto;
 }
+
 .cadre {
-    padding: 40px 10px;
-    text-align: justify;
-    box-shadow: 5px 5px 20px grey;
+  padding: 40px 10px;
+  text-align: justify;
+  box-shadow: 5px 5px 20px grey;
 }
 
 .comp {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px auto 50px auto;
-    width: 90%;
-    max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1400px;
+}
+@media (max-width: 850px) {
+  .comp {
+    flex-direction: column;
+  }
 }
 
 .secondMain {
-    width: 45%;
+  width: 45%;
 }
 
-.secondMain h3 {
-    text-align: center;
-    font-family: 'Courgette', monospace;
-}
 .listItem {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 .liste {
-    font-size: 30px;
-    padding: 10px 20px;
-    align-items: center;
+  font-size: 30px;
+  padding: 10px 20px;
+  align-items: center;
 }
+
 .monCV {
-    margin: 10px auto;
-    max-width: 1241px;
+  margin: 10px auto;
+  max-width: 1241px;
 }
 .monCV img {
-    object-fit: contain;
-    width: 90%;
+  object-fit: contain;
+  width: 90%;
 }
-/*story*/
 
+/*story*/
 .passion {
-    margin: 10px auto 0 auto;
-    width: 90%;
+  margin: 10px auto 0 auto;
+  width: 90%;
 }
 .passion h2 {
-    text-align: center;
+  text-align: center;
 }
 
 /*footer*/
-
 .footBar {
-    height: 70px;
-    box-shadow: 0 -5px 5px -5px red;
+  height: 70px;
+  box-shadow: 0 -5px 5px -5px red;
 }
 
 .footText {
-    text-align: center;
-    padding: 30px;
+  text-align: center;
+  padding: 30px;
 }
 
-@media all and (max-width:1160px) {
-    #nav {
-        display: none;
-    }
-
-    .navMobile {
-        display: inherit;
-    }
-}
+/*# sourceMappingURL=style.css.map */
